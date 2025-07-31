@@ -158,11 +158,14 @@ services:
 
   icinga-postgres:
     image: postgres:14
+   .
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: pgpassword!
+      POSTGRES_MULTIPLE_DATABASES: icingadb,icingaweb,director
     logging: *default-logging
     volumes:
+      - ./env/pgsql:/docker-entrypoint-initdb.d:z
       - icingapgdata:/var/lib/postgresql/data:z
 
 volumes:
