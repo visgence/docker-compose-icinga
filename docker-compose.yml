@@ -10,7 +10,7 @@ x-icinga-db-web-config:
   icingaweb.modules.icingadb.commandtransports.icinga2.password: icingawebpass
   icingaweb.modules.icingadb.commandtransports.icinga2.transport: api
   icingaweb.modules.icingadb.commandtransports.icinga2.username: icingaweb
-  icingaweb.resources.icingadb.charset: utf8mb4
+  icingaweb.resources.icingadb.charset: utf8
   icingaweb.resources.icingadb.db: pgsql
   icingaweb.resources.icingadb.dbname: icingadb
   icingaweb.resources.icingadb.host: icinga-postgres
@@ -26,7 +26,7 @@ x-icinga-director-config:
   icingaweb.modules.director.kickstart.config.port: 5665
   icingaweb.modules.director.kickstart.config.username: icingaweb
   icingaweb.modules.director.kickstart.config.password: ${ICINGAWEB_ICINGA2_API_USER_PASSWORD:-icingaweb}
-  icingaweb.resources.director.charset: utf8mb4
+  icingaweb.resources.director.charset: utf8
   icingaweb.resources.director.db: pgsql
   icingaweb.resources.director.dbname: director
   icingaweb.resources.director.host: icinga-postgres
@@ -45,7 +45,7 @@ x-icinga-web-config:
   icingaweb.groups.icingaweb2.backend: db
   icingaweb.groups.icingaweb2.resource: icingaweb
   icingaweb.passwords.icingaweb2.icingaadmin: icinga
-  icingaweb.resources.icingaweb.charset: utf8mb4
+  icingaweb.resources.icingaweb.charset: utf8
   icingaweb.resources.icingaweb.db: pgsql
   icingaweb.resources.icingaweb.dbname: icingaweb
   icingaweb.resources.icingaweb.host: icinga-postgres
