@@ -25,7 +25,7 @@ x-icinga-director-config:
   icingaweb.modules.director.kickstart.config.host: icinga2
   icingaweb.modules.director.kickstart.config.port: 5665
   icingaweb.modules.director.kickstart.config.username: icingaweb
-  icingaweb.modules.director.kickstart.config.password: ${ICINGAWEB_ICINGA2_API_USER_PASSWORD:-icingaweb}
+  icingaweb.modules.director.kickstart.config.password: icingawebpass
   icingaweb.resources.director.charset: utf8
   icingaweb.resources.director.db: pgsql
   icingaweb.resources.director.dbname: director
@@ -119,6 +119,8 @@ services:
     volumes:
       - icinga2:/data:z
       - ./icinga2.conf.d:/custom_data/custom.conf.d:z
+    cap_add:
+      - NET_ADMIN
 
   icingadb:
     environment:
