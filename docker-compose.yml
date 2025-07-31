@@ -32,7 +32,7 @@ x-icinga-director-config:
   icingaweb.resources.director.host: icinga-postgres
   icingaweb.resources.director.password: pgpassword!
   icingaweb.resources.director.type: db
-  icingaweb.resources.director.username: director
+  icingaweb.resources.director.username: postgres
 
 x-icinga-web-config:
   &icinga-web-config
