@@ -79,7 +79,7 @@ services:
       - -ce
       - |
         echo "Testing the database connection. Container could restart."
-        (echo > /dev/tcp/pgsql/5432) >/dev/null 2>&1
+        (echo > /dev/tcp/icinga-postgres/5432) >/dev/null 2>&1
         echo "Testing the Icinga 2 API connection. Container could restart."
         (echo > /dev/tcp/icinga2/5665) >/dev/null 2>&1
         icingacli director migration run
