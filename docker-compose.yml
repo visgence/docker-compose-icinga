@@ -125,7 +125,7 @@ services:
       ICINGADB_DATABASE_TYPE: pgsql
       ICINGADB_DATABASE_HOST: icinga-postgres
       ICINGADB_DATABASE_PORT: 5432
-      ICINGADB_DATABASE_DATABASE: icingadb/
+      ICINGADB_DATABASE_DATABASE: icingadb
       ICINGADB_DATABASE_USER: postgres
       ICINGADB_DATABASE_PASSWORD: pgpassword!
       ICINGADB_REDIS_HOST: icingadb-redis
